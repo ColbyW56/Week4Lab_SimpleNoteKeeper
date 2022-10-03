@@ -16,13 +16,13 @@
         <br>
         <h2>Edit Note</h2>
         <br>
-        <form method="post" action="editnote">
+        <form method="post" action="note">
             <p>Title: </p>
-            <input type="text" name="titlebox" value=${titleval}>
+            <input type="text" name="titlebox" value=${note.title}>
             <p>Contents: </p>
-            <input type="text" name="contentsbox" value=${contentsvalue}>
+            <textarea name="content" rows="6" cols="25">%{note.content}</textarea>
         </form>
-        
-            <p style="color: red">${inputResponse}</p>
+            <input type="submit" value="Save">
+        <p style="color: red">${inputResponse}</p>
     </body>
 </html>

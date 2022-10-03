@@ -21,6 +21,6 @@
         <h3>Contents:</h3>
         <p>${note.content}</p>
         
-        <a href="edit"></a>
+        <a href="note?edit">Edit</a>
     </body>
 </html>

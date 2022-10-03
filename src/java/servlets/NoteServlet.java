@@ -24,9 +24,10 @@ import models.Note;
 
 public class NoteServlet extends HttpServlet {
     
-    public String path = getServletContext().getRealPath("/WEB-INF/note.txt");
-    
     protected void doGet(HttpServletRequest request, HttpServletResponse respones) throws ServletException, IOException {
+            String edit = request.getParameter("edit");
+            String path = getServletContext().getRealPath("/WEB-INF/note.txt");
+            
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(path)));
 
@@ -39,7 +40,7 @@ public class NoteServlet extends HttpServlet {
             e.printStackTrace();
         }
         
-        if (request.getParameter("editnote") == null) {
+        if (edit == null) {
             getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp")
                     .forward(request, respones);
         } else {
@@ -53,6 +54,7 @@ public class NoteServlet extends HttpServlet {
         
         String title = request.getParameter("title");
         String content = request.getParameter("content");
+        String path = getServletContext().getRealPath("/WEB-INF/note.txt");
         
         if (title.equals("") || content.equals("")) {
             request.setAttribute("inputResponse", "Please provide both a title and body text");
