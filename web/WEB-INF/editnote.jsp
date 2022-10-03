@@ -21,7 +21,8 @@
             <input type="text" name="titlebox" value=${titleval}>
             <p>Contents: </p>
             <input type="text" name="contentsbox" value=${contentsvalue}>
-            
         </form>
+        
+            <p style="color: red">${inputResponse}</p>
     </body>
 </html>

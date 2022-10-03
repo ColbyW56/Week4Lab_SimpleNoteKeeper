@@ -4,21 +4,20 @@
         <servlet-name>NoteServlet</servlet-name>
         <servlet-class>servlets.NoteServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>Note</servlet-name>
-        <servlet-class>models.Note</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>NoteServlet</servlet-name>
-        <url-pattern>/NoteServlet</url-pattern>
+        <url-pattern>/note</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Note</servlet-name>
-        <url-pattern>/Note</url-pattern>
+        <servlet-name>NoteServlet</servlet-name>
+        <url-pattern>/edit</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>note</welcome-file>
+    </welcome-file-list>
 </web-app>
