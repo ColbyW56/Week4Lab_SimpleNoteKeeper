@@ -20,9 +20,11 @@
             <p>Title: </p>
             <input type="text" name="titlebox" value=${note.title}>
             <p>Contents: </p>
-            <textarea name="content" rows="6" cols="25">%{note.content}</textarea>
+            <textarea name="content" rows="6" cols="25" value="${note.content}"></textarea>
+            
+            <input type="submit" name="save" value="Save">
         </form>
-            <input type="submit" value="Save">
+            
         <p style="color: red">${inputResponse}</p>
     </body>
 </html>
